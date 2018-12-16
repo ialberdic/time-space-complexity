@@ -1,0 +1,19 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "test for interviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Ivan Alberdi",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
