@@ -5,6 +5,9 @@ const max = string => {
     const characters = {};
 
     for (let character of string) {
+        console.log(character, "...Character");
+        console.log(characters[character], "...Characters Obj 1");
+        console.log(characters[character] + 1 || 1, "...Characters Obj 2");
         characters[character] = characters[character] + 1 || 1;
         console.log(characters[character], "...Init");
     }

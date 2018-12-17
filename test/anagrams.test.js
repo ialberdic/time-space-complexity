@@ -8,9 +8,13 @@ const charCount = string => {
     //     table[char] = table[char] + 1 || 1;
 
     //If we pass alphabetic chars we can remove regex
-    for (let char of string.toLowerCase())
-            table[char] = table[char] + 1 || 1;
+    for (let char of string.toLowerCase()) {
+        console.log(table[char], " Char 1");
+        table[char] = table[char] + 1 || 1;
+        console.log(table[char], " Char 2");
+    }
 
+    console.log(table, "...Table");
     return table;
 };
 

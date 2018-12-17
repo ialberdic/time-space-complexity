@@ -7,6 +7,7 @@ const chunk = (array, size) => {
 
     for (let item of array) {
         const lastChunk = chunks[chunks.length - 1];
+        console.log(lastChunk, "...Last chunk");
         if (!lastChunk || lastChunk.length === size) chunks.push([item]);
         else lastChunk.push(item);
     }
@@ -42,12 +43,12 @@ describe("Array chunk", () => {
         assert.deepEqual(chunk([1, 2, 3, 4], 3), [[1, 2, 3], [4]]);
         assert.deepEqual(chunk([1, 2, 3, 4], 5), [[1, 2, 3, 4]]);
 
-        assert.deepEqual(_chunk([1, 2, 3, 4], 2), [[1, 2], [3, 4]]);
-        assert.deepEqual(_chunk([1, 2, 3, 4], 3), [[1, 2, 3], [4]]);
-        assert.deepEqual(_chunk([1, 2, 3, 4], 5), [[1, 2, 3, 4]]);
-
-        assert.deepEqual(__chunk([1, 2, 3, 4], 2), [[1, 2], [3, 4]]);
-        assert.deepEqual(__chunk([1, 2, 3, 4], 3), [[1, 2, 3], [4]]);
-        assert.deepEqual(__chunk([1, 2, 3, 4], 5), [[1, 2, 3, 4]]);
+        // assert.deepEqual(_chunk([1, 2, 3, 4], 2), [[1, 2], [3, 4]]);
+        // assert.deepEqual(_chunk([1, 2, 3, 4], 3), [[1, 2, 3], [4]]);
+        // assert.deepEqual(_chunk([1, 2, 3, 4], 5), [[1, 2, 3, 4]]);
+        //
+        // assert.deepEqual(__chunk([1, 2, 3, 4], 2), [[1, 2], [3, 4]]);
+        // assert.deepEqual(__chunk([1, 2, 3, 4], 3), [[1, 2, 3], [4]]);
+        // assert.deepEqual(__chunk([1, 2, 3, 4], 5), [[1, 2, 3, 4]]);
     });
 });

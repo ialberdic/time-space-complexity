@@ -4,8 +4,10 @@ const { assert } = chai;
 const capitalize = phrase => {
     const words = [];
 
-    for (let word of phrase.split(" "))
+    for (let word of phrase.split(" ")) {
+        console.log(word.slice(1), "...Slice");
         words.push(word[0].toUpperCase() + word.slice(1));
+    }
 
     console.log(words, "...Words");
     return words.join(" ");

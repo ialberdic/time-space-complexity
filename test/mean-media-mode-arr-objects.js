@@ -73,7 +73,7 @@ function getMeanArrObjects(arr) {
     for (let item of arr) {
        sum += item.weight;
     }
-    return sum / arr.length
+    return sum / arr.length;
 }
 
 

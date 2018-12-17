@@ -10,13 +10,18 @@ const caesarCipher = (string, number) => {
         const letter = input[i];
 
         if (alphabet.indexOf(letter) === -1) {
+            console.log("...Found it");
             output += letter;
             continue;
         }
-
+        console.log("...Continue");
+        console.log(alphabet.indexOf(letter), "..Alphabet index of letter");
         let index = alphabet.indexOf(letter) + number % 26;
+        console.log(index, "...Index");
         if (index > 25) index -= 26;
         if (index < 0) index += 26;
+
+        console.log((string[i] === string[i].toUpperCase()), "...Y/N");
 
         output +=
             string[i] === string[i].toUpperCase()
